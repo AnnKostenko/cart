@@ -1,7 +1,10 @@
 <?php
+
 include 'cart.php';
 
-delete($_GET['id']);
+$cart = new Cart;
+
+$cart->delete($_GET['id']);
 
 header('Location: /list.php');
 exit;
